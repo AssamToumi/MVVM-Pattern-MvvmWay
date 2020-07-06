@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Mvvm.Session01.View.Person"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UniformGrid Columns="2">
+        <Label Content="ID:"/>
+        <TextBox Text="{Binding Id}"/>
+
+        <Label Content="First Name:"/>
+        <TextBox Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Content="Last Name:"/>
+        <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Content="Full Name:"/>
+        <TextBox Text="{Binding FullName, Mode=OneWay}"/>
+    </UniformGrid>
+</UserControl>
